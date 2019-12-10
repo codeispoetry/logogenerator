@@ -1,0 +1,19 @@
+$green: #46962b;
+$purple: #E6007E;
+$yellow: #FEEE00;
+
+$primary: $green;
+$secondary: $purple;
+
+$fa-font-path: "../fonts";
+
+$font-family-base: 'PTSans';
+$headings-font-family: 'ArvoGruen';
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1120px,
+  xl: 1200px
+);

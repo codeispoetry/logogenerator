@@ -1,0 +1,83 @@
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 100;
+
+  &.active {
+    display: block;
+  }
+}
+
+
+#waiting {
+  z-index: 110;
+  font-size: 70px;
+  align-items: center;
+  justify-content: center;
+
+  &.active {
+    display: flex;
+  }
+}
+
+#canvas {
+  margin: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.opacity {
+  opacity: 0.20;
+}
+
+footer {
+
+  @include media-breakpoint-up(lg) {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1030;
+  }
+
+  a {
+    color: $white;
+  }
+}
+
+
+.cockpit{
+  zoom: 2.3;
+  @include media-breakpoint-up(lg) {
+     zoom:1;
+  }
+}
+
+h6{
+  color: $purple;
+  font-family: $font-family-base;
+  @include media-breakpoint-up(lg) {
+      color: inherit;
+      font-family: inherit;
+  }
+}
+
+optgroup{
+  font-family: $font-family-base;
+}
+
+$chess1: #aaa;
+$chess2: #555;
+.bg-chess{
+  background: $chess1;
+  background-image: linear-gradient(45deg, $chess2 25%, transparent 25%, transparent 75%, $chess2 75%, $chess2),linear-gradient(45deg, $chess2 25%, transparent 25%, transparent 75%, $chess2 75%, $chess2);
+  background-size: 20px 20px;
+  background-position: 0 0 , 10px 10px;
+}

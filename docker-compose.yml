@@ -1,0 +1,25 @@
+version: '3.3'
+#http://192.168.99.100:9000/ wegen Toolbox
+
+services:
+  webserver:
+    build: docker/php
+    ports:
+      - '${PORT}:80'
+    volumes:
+      - ./code:/var/www/html
+      - ./fonts:/usr/share/fonts/truetype/custom
+      - ./deployment/sshkeys:/root/.ssh
+      - ./deployment/scripts:/root/scripts
+    networks:
+      - logogenerator
+  grunt:
+    build: docker/node
+    volumes:
+      - ./code:/var/www/html
+    command: grunt
+    working_dir: /var/www/html
+    networks:
+      - logogenerator
+networks:
+  logogenerator:

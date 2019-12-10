@@ -1,0 +1,29 @@
+
+.slider {
+  display: flex;
+
+  input {
+    margin: 0 1em;
+  }
+}
+
+.sizecontainer {
+  input {
+    width: 5em !important;
+  }
+
+
+  select {
+    width: 4em !important;
+  }
+
+  option:not(.fas) {
+    font-family: $font-family-base;
+  }
+}
+
+#upload,
+#uploadfile {
+  height: 0;
+}
+
