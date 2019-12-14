@@ -10,14 +10,6 @@ $(document).ready(function () {
     draw[2].size( 250, 135 );
     draw[3].size( 250, 135 );
 
+    $('.message').hide();
 
 });
-
-
-function message( text = false ){
-    if( !text ){
-        $('#message').hide();
-        return;
-    }
-    $('#message').show().html( text );
-}

@@ -23,46 +23,49 @@ if (file_exists('log/do.php')){
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-lg-9 text-center pt-4 pb-3">
+        <div class="col-12 text-center pt-4 pb-3">
             <h1 class="text-uppercase h6">Logogenerator</h1>
         </div>
-        <div class="col-12 col-lg-9">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div id="canvas1" class="canvas"></div>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="png">
-                        <i class="fas fa-download"></i> png
-                    </button>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="svg">
-                        <i class="fas fa-download"></i> svg
-                    </button>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div id="canvas2" class="canvas bg-chess"></div>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="png">
-                        <i class="fas fa-download"></i> png
-                    </button>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="svg">
-                        <i class="fas fa-download"></i> svg
-                    </button>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div id="canvas3" class="canvas"></div>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="png">
-                        <i class="fas fa-download"></i> png
-                    </button>
-                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="svg">
-                        <i class="fas fa-download"></i> svg
-                    </button>
-                </div>
+        <div class="col-12 col-md-4 offset-md-4 mb-5 cockpit">
+            <input type="text" name="subline" id="subline" value="" placeholder="Deine Stadt" class="form-control">
+            <div class="message bg-danger text-white small p-2">
+                Die Worte Kreisverband, Ortsverband, KV und OV sind nicht 
+                nötig im Logo. Überlege bitte, ob Du sie wirklich brauchst.
             </div>
         </div>
-        <div class="col-12 col-lg-3 mt-3 mb-5 cockpit">
-            <?php require_once('cockpit.php'); ?>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 mb-5 text-center">
+            <div id="canvas1" class="canvas"></div>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="png">
+                <i class="fas fa-download"></i> png
+            </button>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="svg">
+                <i class="fas fa-download"></i> svg
+            </button>
+        </div>
+
+        <div class="col-12 col-md-4 mb-5 text-center">
+            <div id="canvas2" class="canvas bg-chess"></div>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="png">
+                <i class="fas fa-download"></i> png
+            </button>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="svg">
+                <i class="fas fa-download"></i> svg
+            </button>
+        </div>
+
+        <div class="col-12 col-md-3 mb-5 text-center">
+            <div id="canvas3" class="canvas"></div>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="png">
+                <i class="fas fa-download"></i> png
+            </button>
+            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="svg">
+                <i class="fas fa-download"></i> svg
+            </button>
         </div>
     </div>
+    
 </div>
 
 <footer class="row bg-primary p-2 text-white">
