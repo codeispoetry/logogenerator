@@ -40,13 +40,8 @@ const subline = {
 };
 
 function check_wording(){
-    let word = $('#subline').val().toUpperCase();
-
-    if( word.startsWith('KV') || 
-        word.startsWith('OV') ||
-        word.startsWith('Kreisv') ||
-        word.startsWith('Ortsv')
-    ){
+   
+    if( $('#subline').val().match(/^KV|^OV|^Kreisv|^Ortsv/i) ){
         $('.message').slideDown();
     }else{
         $('.message').hide();
