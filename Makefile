@@ -1,6 +1,13 @@
 up:
 	docker-compose up -d
 
+stop:
+	docker-compose stop
+
+restart:
+	docker-compose stop
+	docker-compose up -d
+
 build:
 	docker-compose up --build -d
 

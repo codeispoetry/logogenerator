@@ -12,16 +12,17 @@ const subline = {
 
         subline.svg1 = draw[1].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
             {
-                family: 'ArvoGruen',
+                family: 'Futura Condensed Extra Bold',
                 size: 10,
                 anchor: 'left',
                 weight: 300
             }
         );
 
+        
         subline.svg2 = draw[2].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
             {
-                family: 'ArvoGruen',
+                family: 'Futura Condensed Extra Bold',
                 size: 10,
                 anchor: 'left',
                 weight: 300
@@ -30,7 +31,7 @@ const subline = {
 
         subline.svg3 = draw[3].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
             {
-                family: 'ArvoGruen',
+                family: 'Futura Condensed Extra Bold',
                 size: 10,
                 anchor: 'left',
                 weight: 300
