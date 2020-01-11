@@ -35,35 +35,36 @@ if (file_exists('log/do.php')){
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-4 mb-5 text-center">
-            <div id="canvas1" class="canvas"></div>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="png">
-                <i class="fas fa-download"></i> png
-            </button>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="1" data-format="svg">
-                <i class="fas fa-download"></i> svg
-            </button>
+        <?php for($i = 1; $i <= 3; $i++){ ?>
+            <div class="col-12 col-md-4 mb-5 text-center">
+                <div id="canvas<?php echo $i;?>" class="canvas <?php if(in_array($i,array(2,5))) echo 'bg-chess'; ?>"></div>
+                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="png">
+                        <i class="fas fa-download"></i> png
+                    </button>
+                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="svg">
+                        <i class="fas fa-download"></i> svg
+                    </button>
+            </div>
+        <?php } ?>
+    </div>
+
+    <div class="row">
+        <div class="col-12 text-center pt-4 pb-3">
+            <h1 class="text-uppercase h6">Logovariante Berlin</h1>
         </div>
 
-        <div class="col-12 col-md-4 mb-5 text-center">
-            <div id="canvas2" class="canvas bg-chess"></div>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="png">
-                <i class="fas fa-download"></i> png
-            </button>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="2" data-format="svg">
-                <i class="fas fa-download"></i> svg
-            </button>
-        </div>
+        <?php for($i = 4; $i <= 6; $i++){ ?>
+            <div class="col-12 col-md-4 mb-5 text-center">
+                <div id="canvas<?php echo $i;?>" class="canvas <?php if(in_array($i,array(2,5))) echo 'bg-chess'; ?>"></div>
+                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="png">
+                        <i class="fas fa-download"></i> png
+                    </button>
+                    <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="svg">
+                        <i class="fas fa-download"></i> svg
+                    </button>
+            </div>
+        <?php } ?>
 
-        <div class="col-12 col-md-3 mb-5 text-center">
-            <div id="canvas3" class="canvas"></div>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="png">
-                <i class="fas fa-download"></i> png
-            </button>
-            <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="3" data-format="svg">
-                <i class="fas fa-download"></i> svg
-            </button>
-        </div>
     </div>
     
 </div>
@@ -86,49 +87,12 @@ if (file_exists('log/do.php')){
 </footer>
 
 
-<div class="overlays">
-    <div id="pixabay" class="overlay">
-        <div class="container-fluid">
-            <a href="#" class="close text-danger">
-                <i class="fas fa-times"></i>
-            </a>
-            <div class="row pt-2 mt-1">
-                <div class="col-12 text-center">
-                    <h2>Bilder suchen</h2>
-                    <p class="small">Die Bilder stammen von <a href="https://pixabay.com" target="_blank">Pixabay</a> und 
-                    dürfen kostenlos und ohne Quellenangabe genutzt werden. Bilder, auf denen einzelne 
-                    Menschen zu erkennen sind, dürfen nicht genutzt werden.
-                </div>
-                <div class="col-4 offset-4" id="pixabay">
-                    <form>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text"><i class="fas fa-images"></i></div>
-                            </div>
-                            <input type="text" class="form-control q" placeholder="z.B. Berge oder Sonnenblume">
-                            <div class="input-group-append">
-                                <button type="submit" class="input-group-text btn-primary">Suchen</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
 
-            <div class="col-12 p-5 results"></div>
-        </div>
-
-    </div>
-
-
-    <div id="waiting" class="overlay text-danger bg-light">
-        <h1>Augenblick bitte</h1>
-    </div>
-</div>
 
 
 <script src="./vendor/jquery-3.4.1.min.js"></script>
 <script src="./vendor/svg.min.js"></script>
-<script src="./vendor/svg.draggable.min.js"></script>
+
 <script src="./assets/js/main.min.js"></script>
 </body>
 </html>

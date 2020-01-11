@@ -1,14 +1,13 @@
 var draw = [];
-draw[1] = SVG().addTo('#canvas1');
-draw[2] = SVG().addTo('#canvas2');
-draw[3] = SVG().addTo('#canvas3');
-
+for(let i = 1; i<=6; i++){
+    draw[ i ] = SVG().addTo('#canvas' + i);
+}
 
 
 $(document).ready(function () {
-    draw[1].size( 250, 135 );
-    draw[2].size( 250, 135 );
-    draw[3].size( 250, 135 );
+    for(let i = 1; i<=6; i++){
+        draw[ i ].size( 250, 135 );
+    }
 
     $('.message').hide();
 
