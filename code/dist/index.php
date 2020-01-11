@@ -1,10 +1,19 @@
 <?php
 $samlfile = '/var/simplesaml/lib/_autoload.php';
+$landesverband = 0;
+$is_berlin = false;
 
 if (file_exists($samlfile)) {
     require_once($samlfile);
     $as = new SimpleSAML_Auth_Simple('default-sp');
     $as->requireAuth();
+
+    $attributes = $as->getAttributes();
+    $landesverband = (int) substr($attributes['membershipOrganizationKey'][0], 1, 2);
+
+    if( $landesverband == 3){
+        $is_berlin = true;
+    }
 }
 
 if (file_exists('log/do.php')){
@@ -48,7 +57,7 @@ if (file_exists('log/do.php')){
         <?php } ?>
     </div>
 
-    <div class="row">
+    <div class="row <?php if( !$is_berlin) echo 'd-none'?>">
         <div class="col-12 text-center pt-4 pb-3">
             <h1 class="text-uppercase h6">Logovariante Berlin</h1>
         </div>
