@@ -1,1 +1,1 @@
-Redirect /index.html http://localhost:9000/dist
+Redirect /index.html http://localhost:9100/dist
