@@ -1,42 +1,30 @@
 const subline = {
+    svg: new Array(),
 
-    svg1: draw[1].circle(0),
-    svg2: draw[2].circle(0),
-    svg3: draw[3].circle(0),
+    init(){
+        for(let i = 1; i <= 6; i++){
+            subline.svg[ i ] = draw[ i ].circle(0);
+        }
+    },
 
 
     draw(){
-        subline.svg1.remove();
-        subline.svg2.remove();
-        subline.svg3.remove();
 
-        subline.svg1 = draw[1].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
-            {
-                family: 'Futura Condensed Extra Bold',
-                size: 10,
-                anchor: 'left',
-                weight: 300
-            }
-        );
-
+        for(let i = 1; i <= 6; i++){
+            subline.svg[ i ].remove();
         
-        subline.svg2 = draw[2].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
-            {
-                family: 'Futura Condensed Extra Bold',
-                size: 10,
-                anchor: 'left',
-                weight: 300
-            }
-        ),
 
-        subline.svg3 = draw[3].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,125).font(
-            {
-                family: 'Futura Condensed Extra Bold',
-                size: 10,
-                anchor: 'left',
-                weight: 300
-            }
-        )
+            subline.svg[ i ] = draw[ i ].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,126).font(
+                {
+                    family: 'Futura Condensed Extra Bold',
+                    size: 9,
+                    anchor: 'left',
+                    weight: 300
+                }
+            );
+
+        }
+       
     },
 };
 

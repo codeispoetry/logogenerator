@@ -9,6 +9,8 @@ $(document).ready(function () {
         draw[ i ].size( 250, 135 );
     }
 
+    subline.init();
+
     $('.message').hide();
 
 });
