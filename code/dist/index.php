@@ -44,7 +44,7 @@ if (file_exists('log/do.php')){
         </div>
     </div>
     <div class="row">
-        <?php for($i = 1; $i <= 3; $i++){ ?>
+        <?php for($i = 1; $i <= 4; $i++){ ?>
             <div class="col-12 col-md-4 mb-5 text-center">
                 <div id="canvas<?php echo $i;?>" class="canvas <?php if(in_array($i,array(2,5))) echo 'bg-chess'; ?>"></div>
                     <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="png">
@@ -62,7 +62,7 @@ if (file_exists('log/do.php')){
             <h1 class="text-uppercase h6">Logovariante Berlin</h1>
         </div>
 
-        <?php for($i = 4; $i <= 6; $i++){ ?>
+        <?php for($i = 5; $i <= 7; $i++){ ?>
             <div class="col-12 col-md-4 mb-5 text-center">
                 <div id="canvas<?php echo $i;?>" class="canvas <?php if(in_array($i,array(2,5))) echo 'bg-chess'; ?>"></div>
                     <button class="btn btn-secondary btn-sm mt-3 download" data-canvas="<?php echo $i;?>" data-format="png">

@@ -2,7 +2,7 @@ const subline = {
     svg: new Array(),
 
     init(){
-        for(let i = 1; i <= 6; i++){
+        for(let i = 1; i <= 7; i++){
             subline.svg[ i ] = draw[ i ].circle(0);
         }
     },
@@ -10,11 +10,17 @@ const subline = {
 
     draw(){
 
-        for(let i = 1; i <= 6; i++){
+        for(let i = 1; i <= 7; i++){
             subline.svg[ i ].remove();
         
+            let x = 5;
+            let y = 126;
 
-            subline.svg[ i ] = draw[ i ].text($('#subline').val().toUpperCase()).fill( 'white' ).move(5,126).font(
+            if ( i == 4){
+                x = 19;
+                y = 118;
+            }
+            subline.svg[ i ] = draw[ i ].text($('#subline').val().toUpperCase()).fill( 'white' ).move(x, y).font(
                 {
                     family: 'Futura Condensed Extra Bold',
                     size: 9,
