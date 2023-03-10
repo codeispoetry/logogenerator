@@ -38,8 +38,8 @@ if (file_exists('log/do.php')){
         <div class="col-12 col-md-4 offset-md-4 mb-5 cockpit">
             <input type="text" name="subline" id="subline" value="" placeholder="Deine Stadt" class="form-control">
             <div class="message bg-danger text-white small p-2">
-                Die Worte Kreisverband, Ortsverband, KV und OV sind nicht 
-                nötig im Logo. Überlege bitte, ob Du sie wirklich brauchst.
+                Wörter wie Kreisverband, KV oder OV sind nicht immer
+                nötig. Eventuell kannst Du sie weglassen.
             </div>
         </div>
     </div>
