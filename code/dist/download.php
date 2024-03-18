@@ -2,7 +2,7 @@
 
 $filename = sanitize_filename($_GET['file']);
 $downloadname = $_GET['downloadname'] ?: 'gruene';
-
+$downloadname = sanitize_filename($downloadname);
 
 $contentType = 'image/png';
 $format = 'png';
