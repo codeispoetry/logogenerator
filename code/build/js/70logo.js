@@ -9,10 +9,12 @@ const logo = {
     svg2 = draw[2].svg( pattern.replace(/#46962b/g,'#ffffff')),
     svg3 = draw[3].svg( pattern.replace(/(#46962b)|(#4cb4e7)|(#ffee00)/g,'#000000')),
     svg4 = draw[4].svg( patternGreenFond),
+    svg5 = draw[5].svg( patternGreenFond),
+
 
 
     
-    svg4 = draw[5].svg( patternBerlin),
-    svg5 = draw[6].svg( patternBerlin.replace(/#46962b/g,'#ffffff')),
-    svg6 = draw[7].svg( patternBerlin.replace(/(#46962b)|(#4cb4e7)|(#ffee00)/g,'#000000'))
+    svg6 = draw[6].svg( patternBerlin),
+    svg7 = draw[7].svg( patternBerlin.replace(/#46962b/g,'#ffffff')),
+    svg8 = draw[8].svg( patternBerlin.replace(/(#46962b)|(#4cb4e7)|(#ffee00)/g,'#000000'))
 }
