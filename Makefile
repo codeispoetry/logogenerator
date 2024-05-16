@@ -30,4 +30,4 @@ down:
 	docker-compose down
 
 deploy:
-	rsync -avhz --exclude log/log.txt --exclude tmp ./code/dist/ tom@sharepicgenerator.de:/var/www/logo.sharepicgenerator.de/current --delete
+	rsync -avhz --exclude log/log.txt --exclude tmp ./code/dist/ sharepic:/var/www/vhosts/sharepicgenerator.de/logo.sharepicgenerator.de --delete
